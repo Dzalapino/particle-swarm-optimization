@@ -1,6 +1,7 @@
 from unittest import TestCase, main
 from particle import Particle
 from vector2 import Vector2
+from sys import float_info
 
 
 class TestVector2(TestCase):
@@ -13,7 +14,8 @@ class TestVector2(TestCase):
         self.assertEqual(self.particle.position.y, 3.0)
         self.assertEqual(self.particle.velocity.x, 3.0)
         self.assertEqual(self.particle.velocity.y, 2.0)
-        self.assertIsNone(self.particle.particle_best)
+        self.assertEqual(self.particle.personal_best.x, 0)
+        self.assertEqual(self.particle.personal_best.y, float_info.max)
 
     def test_str(self):
         self.assertEqual(
