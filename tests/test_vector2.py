@@ -28,6 +28,10 @@ class TestVector2(TestCase):
         self.assertEqual(result.x, -10.0)
         self.assertEqual(result.y, -10.0)
 
+    def test_eq(self):
+        result = Vector2(2.0, 3.0) == Vector2(2.0, 3.0)
+        self.assertTrue(result)
+
     def test_random_vector_in_range(self):
         result = random_vector_in_range(4, 5)
         self.assertTrue(4 <= result.x <= 5)

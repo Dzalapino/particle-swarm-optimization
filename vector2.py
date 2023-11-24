@@ -19,6 +19,9 @@ class Vector2:
     def __mul__(self, other):
         return Vector2(self.x * other, self.y * other)
 
+    def __eq__(self, other):
+        return self.x == other.x and self.y == other.y
+
     def __str__(self) -> str:
         return f'Vector2({self.x, self.y})'
 
