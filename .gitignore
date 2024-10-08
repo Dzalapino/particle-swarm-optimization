@@ -13,3 +13,5 @@
 /.idea/particle-swarm-optimization.iml
 /.idea/vcs.xml
 /.idea/workspace.xml
+
+__pycache__/
